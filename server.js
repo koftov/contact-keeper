@@ -4,7 +4,6 @@ const path = require("path");
 const dotenv = require("dotenv");
 
 dotenv.config();
-console.log(process.env.mongoURI);
 
 const app = express();
 

@@ -71,7 +71,7 @@ const ContactForm = () => {
         value={phone}
         onChange={onChange}
       />
-      <h4>Contact Type</h4>
+      <h3 style={{ textAlign: 'left' }}>Contact Type</h3>
       <input
         type='radio'
         name='type'

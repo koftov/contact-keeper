@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-  --primary-color: #6200ea;
+  --primary-color: #212121;
   --dark-color: #333333;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -17,8 +17,8 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
-  color: #333;
+  background-color: #333;
+  color: whitesmoke;
 }
 
 a {
@@ -234,7 +234,7 @@ img {
 .badge-primary,
 .alert-primary {
   background: var(--primary-color);
-  color: #fff;
+  color: whitesmoke;
 }
 
 .btn-light,
@@ -250,7 +250,7 @@ img {
 .badge-dark,
 .alert-dark {
   background: var(--dark-color);
-  color: #fff;
+  color: whitesmoke;
 }
 
 .btn-danger,
@@ -258,7 +258,7 @@ img {
 .badge-danger,
 .alert-danger {
   background: var(--danger-color);
-  color: #fff;
+  color: whitesmoke;
 }
 
 .btn-success,
@@ -266,14 +266,14 @@ img {
 .badge-success,
 .alert-success {
   background: var(--success-color);
-  color: #fff;
+  color: whitesmoke;
 }
 
 .btn-white,
 .bg-white,
 .badge-white,
 .alert-white {
-  background: #fff;
+  background: whitesmoke;
   color: #333;
   border: #ccc solid 1px;
 }
@@ -293,6 +293,8 @@ img {
 
 /* Forms */
 input {
+  color: whitesmoke;
+  background: var(--primary-color);
   margin: 1.2rem 0;
 }
 
@@ -383,7 +385,7 @@ table th {
 }
 
 .navbar a {
-  color: #fff;
+  color: whitesmoke;
   padding: 1rem;
   margin: 0 0.25rem;
   border-radius: 5px;

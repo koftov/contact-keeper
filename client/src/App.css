@@ -22,7 +22,7 @@ body {
 }
 
 a {
-  color: var(--primary-color);
+  color: #f5f5f5;
   text-decoration: none;
 }
 

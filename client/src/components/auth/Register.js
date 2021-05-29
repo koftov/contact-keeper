@@ -49,7 +49,7 @@ const Register = props => {
 
   return (
     <div className='form-container'>
-      <h1 className='text-primary'>
+      <h1>
         Register
       </h1>
       <form onSubmit={onSubmit}>

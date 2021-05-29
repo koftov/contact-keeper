@@ -90,8 +90,9 @@ img {
 
 /* Cards */
 .card {
+  border-radius: 5px;
   padding: 1rem;
-  border: #ccc 1px dotted;
+  border: #ccc 1px solid;
   margin: 0.7rem 0;
 }
 
@@ -293,6 +294,7 @@ img {
 
 /* Forms */
 input {
+  border-radius: 5px;
   color: whitesmoke;
   background: var(--primary-color);
   margin: 1.2rem 0;

@@ -100,6 +100,7 @@ const ContactForm = () => {
       <label htmlFor='professional'>Professional</label>
       <div>
         <input
+          disabled={!name}
           type='submit'
           value={current ? 'Update Contact' : 'Add Contact'}
           className='btn btn-primary btn-block'

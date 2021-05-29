@@ -445,7 +445,7 @@ table th {
 
   /* Navbar */
   .navbar {
-    display: block;
+    padding: 0;
     text-align: center;
   }
 

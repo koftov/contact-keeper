@@ -48,7 +48,7 @@ const Navbar = ({ title, icon }) => {
     <div className='navbar bg-primary'>
       <h1>
         <Link to='/'>
-          <i className={icon} /> {title}
+          <i className={icon} /> <span className='hide-sm'>{title}</span>
         </Link>
       </h1>
       <ul>{isAuthenticated ? authLinks : guestLinks}</ul>

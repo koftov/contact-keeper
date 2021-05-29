@@ -32,7 +32,7 @@ const Login = props => {
 
   const onSubmit = e => {
     e.preventDefault();
-    if (email === '' || password === '') {
+    if (email.indexOf('@') < 0 || email.indexOf('.') < 0 || password.length < 6) {
       setAlert('Please fill in all fields', 'danger');
     } else {
       login({

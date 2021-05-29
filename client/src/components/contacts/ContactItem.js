@@ -28,6 +28,11 @@ const ContactItem = ({ contact }) => {
         </span>
       </h3>
       <ul className='list'>
+          {address && (
+          <li>
+            <i className='fas fa-map-marker-alt' /> <a href=`https://maps.google.com/?q=${address}`>{address}</a>
+          </li>
+        )}
         {email && (
           <li>
             <i className='fas fa-envelope-open' /> <a href=`mailto:${email}`>{email}</a>

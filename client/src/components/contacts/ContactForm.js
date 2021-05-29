@@ -12,6 +12,7 @@ const ContactForm = () => {
     } else {
       setContact({
         name: '',
+        address: '',
         email: '',
         phone: '',
         type: 'personal'
@@ -26,7 +27,7 @@ const ContactForm = () => {
     type: 'personal'
   });
 
-  const { name, email, phone, type } = contact;
+  const { name, address, email, phone, type } = contact;
 
   const onChange = e =>
     setContact({ ...contact, [e.target.name]: e.target.value });
@@ -55,6 +56,13 @@ const ContactForm = () => {
         placeholder='Name'
         name='name'
         value={name}
+        onChange={onChange}
+      />  
+      <input
+        type='text'
+        placeholder='Address'
+        name='address'
+        value={address}
         onChange={onChange}
       />
       <input

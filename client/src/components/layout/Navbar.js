@@ -25,7 +25,7 @@ const Navbar = ({ title, icon }) => {
     <Fragment>
       <li>Hello {user && user.name}</li>
       <li>
-        <a onClick={onLogout} href='#!'>
+        <a onClick={onLogout} aria-label="logout" href='#!'>
           <i className='fas fa-sign-out-alt' />{' '}
           <span className='hide-sm'>Logout</span>
         </a>
@@ -47,7 +47,7 @@ const Navbar = ({ title, icon }) => {
   return (
     <div className='navbar bg-primary'>
       <h1>
-        <Link to='/'>
+        <Link aria-label="home" to='/'>
           <i className={icon} /> <span className='hide-sm'>{title}</span>
         </Link>
       </h1>

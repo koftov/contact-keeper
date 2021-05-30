@@ -30,7 +30,7 @@ const ContactItem = ({ contact }) => {
       <ul className='list'>
         {address && (
           <li>
-            <i className='fas fa-map-marker-alt' /> <a target="_blank" rel="noopener" href={`https://maps.google.com/?q=${address}`}>{address}</a>
+            <i className='fas fa-map-marker-alt' /> <a target="_blank" rel="noopener noreferrer" href={`https://maps.google.com/?q=${address}`}>{address}</a>
           </li>
         )}
         {email && (

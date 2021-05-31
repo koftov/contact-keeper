@@ -30,12 +30,12 @@ const ContactItem = ({ contact }) => {
       <ul className='list'>
         {nickname && (
           <li>
-            <i className='fas fa-user' />{nickname}
+            <i className='fas fa-user' /> {nickname}
           </li>
         )}
         {company && (
           <li>
-            <i className='fas fa-briefcase' />{company}
+            <i className='fas fa-briefcase' /> {company}
           </li>
         )}
         {birthdate && (

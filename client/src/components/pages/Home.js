@@ -7,7 +7,7 @@ const Home = () => {
   const [showFormModal, setShowFormModal] = useState(false)
 
   return (
-    <div className='grid-2'>
+    <div>
       <div className='contact-form-wrapper' style={{ display: showFormModal ? 'block' : 'none' }}>
         <ContactForm setShowFormModal={setShowFormModal} />
       </div>

@@ -10,6 +10,18 @@ const ContactSchema = mongoose.Schema({
     required: true,
     trim: true
   },
+  nickname: {
+    type: String,
+    trim: true
+  },
+  company: {
+    type: String,
+    trim: true
+  },
+  birthdate: {
+    type: Date,
+    trim: true
+  },
   address: {
     type: String,
     trim: true,

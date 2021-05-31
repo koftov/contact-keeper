@@ -28,6 +28,21 @@ const ContactItem = ({ contact }) => {
         </span>
       </h3>
       <ul className='list'>
+        {nickname && (
+          <li>
+            <i className='fas fa-user' />{nickname}
+          </li>
+        )}
+        {company && (
+          <li>
+            <i className='fas fa-briefcase' />{company}
+          </li>
+        )}
+        {birthdate && (
+          <li>
+            <i className='fa fa-birthday-cake' />{birthdate}
+          </li>
+        )}
         {address && (
           <li>
             <i className='fas fa-map-marker-alt' /> <a target="_blank" rel="noopener noreferrer" href={`https://maps.google.com/?q=${address}`}>{address}</a>

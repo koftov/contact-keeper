@@ -40,11 +40,14 @@ router.post(
       return res.status(400).json({errors: errors.array()});
     }
 
-    const {name, address, email, phone, type} = req.body;
+    const {name, nickname, company, birthdate, address, email, phone, type} = req.body;
 
     try {
       const newContact = new Contact({
         name,
+        nickname,
+        company,
+        birthdate,
         address,
         email,
         phone,
@@ -71,6 +74,9 @@ router.put('/:id', auth, async (req, res) => {
   // Build contact object
   const contactFields = {};
   if (name) contactFields.name = name;
+  if (nickname) contactFields.nickname = nickname;
+  if (company) contactFields.company = company;
+  if (birthdate) contactFields.birthdate = birthdate;
   if (address) contactFields.address = address;
   if (email) contactFields.email = email;
   if (phone) contactFields.phone = phone;

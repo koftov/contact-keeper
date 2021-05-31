@@ -1,6 +1,17 @@
 import React, { useState, useContext, useEffect } from 'react';
 import ContactContext from '../../context/contact/contactContext';
 
+const INITIAL_STATE = {
+  name: '',
+  nickname: '',
+  company: '',
+  birthdate: '',
+  address: '',
+  email: '',
+  phone: '',
+  type: 'personal'
+};
+
 const ContactForm = () => {
   const contactContext = useContext(ContactContext);
 
@@ -10,24 +21,13 @@ const ContactForm = () => {
     if (current !== null) {
       setContact(current);
     } else {
-      setContact({
-        name: '',
-        address: '',
-        email: '',
-        phone: '',
-        type: 'personal'
-      });
+      setContact(INITIAL_STATE);
     }
   }, [contactContext, current]);
 
-  const [contact, setContact] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    type: 'personal'
-  });
+  const [contact, setContact] = useState(INITIAL_STATE);
 
-  const { name, address, email, phone, type } = contact;
+  const { name, nickname, company, birthdate, address, email, phone, type } = contact;
 
   const onChange = e =>
     setContact({ ...contact, [e.target.name]: e.target.value });
@@ -51,6 +51,41 @@ const ContactForm = () => {
       <h2>
         {current ? 'Edit Contact' : 'Add Contact'}
       </h2>
+      <input
+        type='text'
+        placeholder='Name'
+        name='name'
+        value={name}
+        onChange={onChange}
+      />  
+      <input
+        type='text'
+        placeholder='Nickname'
+        name='nickname'
+        value={nickname}
+        onChange={onChange}
+      />  
+      <input
+        type='text'
+        placeholder='Company'
+        name='company'
+        value={company}
+        onChange={onChange}
+      />  
+      <input
+        type='date'
+        placeholder='Birthdate'
+        name='birthdate'
+        value={birthdate}
+        onChange={onChange}
+      />  
+      <input
+        type='text'
+        placeholder='Name'
+        name='name'
+        value={name}
+        onChange={onChange}
+      />  
       <input
         type='text'
         placeholder='Name'

@@ -12,7 +12,7 @@ const INITIAL_STATE = {
   type: 'personal'
 };
 
-const ContactForm = () => {
+const ContactForm = ({ setShowFormModal }) => {
   const contactContext = useContext(ContactContext);
 
   const { addContact, updateContact, clearCurrent, current } = contactContext;
@@ -40,6 +40,7 @@ const ContactForm = () => {
       updateContact(contact);
     }
     clearAll();
+    setShowFormModal(false);
   };
 
   const clearAll = () => {
@@ -127,13 +128,11 @@ const ContactForm = () => {
           className='btn btn-primary btn-block'
         />
       </div>
-      {current && (
-        <div>
-          <button className='btn btn-light btn-block' onClick={clearAll}>
-            Clear
-          </button>
-        </div>
-      )}
+      <div>
+        <button className='btn btn-danger btn-block' type='button' onClick={() => setShowFormModal(false)}>
+          Cancel
+        </button>
+      </div>
     </form>
   );
 };

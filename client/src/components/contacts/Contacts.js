@@ -4,7 +4,7 @@ import ContactItem from './ContactItem';
 import Spinner from '../layout/Spinner';
 import ContactContext from '../../context/contact/contactContext';
 
-const Contacts = () => {
+const Contacts = ({ setShowFormModal }) => {
   const contactContext = useContext(ContactContext);
 
   const { contacts, filtered, getContacts, loading } = contactContext;
@@ -29,7 +29,7 @@ const Contacts = () => {
                   timeout={500}
                   classNames='item'
                 >
-                  <ContactItem contact={contact} />
+                  <ContactItem contact={contact} setShowFormModal={setShowFormModal} />
                 </CSSTransition>
               ))
             : contacts.map(contact => (
@@ -38,7 +38,7 @@ const Contacts = () => {
                   timeout={500}
                   classNames='item'
                 >
-                  <ContactItem contact={contact} />
+                  <ContactItem contact={contact} setShowFormModal={setShowFormModal} />
                 </CSSTransition>
               ))}
         </TransitionGroup>

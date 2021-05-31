@@ -329,9 +329,9 @@ button {
     0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-input[type=submit]:active,
+input[type="submit"]:active,
 button:active {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .form-group {
@@ -418,8 +418,24 @@ table th {
   transition: opacity 1000ms ease-in;
 }
 
+.contact-form-wrapper {
+  position: fixed;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.9);
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  padding: 5vw 35vw;
+  display: none;
+  z-index: 2;
+}
+
 /* Mobile Styles */
 @media (max-width: 700px) {
+  input {
+    margin: 1rem 0;
+  }
+
   .hide-sm {
     display: none;
   }
@@ -456,5 +472,9 @@ table th {
   .navbar ul {
     text-align: center;
     justify-content: center;
+  }
+
+  .contact-form-wrapper {
+    padding: 5vw 10vw 0;
   }
 }

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import ContactContext from '../../context/contact/contactContext';
 
-const ContactItem = ({ contact }) => {
+const ContactItem = ({ contact, setShowFormModal }) => {
   const contactContext = useContext(ContactContext);
   const { deleteContact, setCurrent, clearCurrent } = contactContext;
 
@@ -62,7 +62,11 @@ const ContactItem = ({ contact }) => {
       <p>
         <button
           className='btn btn-dark btn-sm'
-          onClick={() => setCurrent(contact)}
+          onClick={() => {
+            setShowFormModal(true)
+            setCurrent(contact)
+            }
+          }
         >
           Edit
         </button>

@@ -78,21 +78,7 @@ const ContactForm = () => {
         name='birthdate'
         value={birthdate}
         onChange={onChange}
-      />  
-      <input
-        type='text'
-        placeholder='Name'
-        name='name'
-        value={name}
-        onChange={onChange}
-      />  
-      <input
-        type='text'
-        placeholder='Name'
-        name='name'
-        value={name}
-        onChange={onChange}
-      />  
+      />
       <input
         type='text'
         placeholder='Address'

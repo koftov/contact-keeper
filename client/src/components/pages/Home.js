@@ -14,7 +14,7 @@ const Home = () => {
       <div>
         <ContactFilter />
         <Contacts setShowFormModal={setShowFormModal} />
-        <button className='btn btn-primary btn-block' onClick={() => setShowFormModal(true)}>Add Contatct</button>
+        <button className='btn btn-primary btn-block add-contact' onClick={() => setShowFormModal(true)}>Add Contact</button>
       </div>
     </div>
   );

@@ -73,13 +73,13 @@ const ContactForm = ({ setShowFormModal }) => {
         value={company}
         onChange={onChange}
       />  
-      <input
+      {/* <input
         type='date'
         placeholder='Birthdate'
         name='birthdate'
         value={birthdate}
         onChange={onChange}
-      />
+      /> */}
       <input
         type='text'
         placeholder='Address'
